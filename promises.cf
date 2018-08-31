@@ -29,6 +29,7 @@ body common control
                           @(def.bundlesequence_end),
 
                           "hello_world",
+                          "vcs_update",
 
       };
 
@@ -57,6 +58,7 @@ body common control
 
                   "services/main.cf",
                   "hello_world.cf",
+                  "vcs_update.cf",
       };
 
       version => "CFEngine Promises.cf 3.12.0";
