@@ -1,4 +1,4 @@
-bunndle agent vcs_update
+bundle agent vcs_update
 {
 commands:
   policy_server::
