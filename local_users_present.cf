@@ -18,10 +18,10 @@ bundle agent main
         home_bundle => home_skel( $(users), $(skel) );
 }
 
-bundle agent home_skel(user, skel)
+bundle agent home_skel(users, skel)
 {
   files:
-    "/home/$(user)/."
+    "/home/$(users)/."
       create => "true",
       copy_from => seed_cp( $(skel) ),
       depth_search => recurse( "inf" );
