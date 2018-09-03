@@ -7,7 +7,7 @@ body file control
 bundle agent main
 {
   vars:
-    "users" slist => { "vagrant", "dabenji" };
+    "users" slist => { "vagrant", "daebenji" };
     "skel" string => "/etc/skel";
 
   users:
@@ -25,4 +25,8 @@ bundle agent home_skel(user, skel)
       create => "true",
       copy_from => seed_cp( $(skel) ),
       depth_search => recurse( "inf" );
+  
+  editfiles:
+    "/tmp/vagrant/foo/test_plain"
+      AppendIfNoSuchLine "Zeile 1"
 }
