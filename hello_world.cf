@@ -52,7 +52,7 @@ files:
        perms => system,        # Set the permissions of the directory as defined in the body "system" below
        create => "true";       # Make sure the directory exists, create if not 
   
-  "/tmp/vagrant/homerr/test_plain"  # Path and name of the file we wish to create
+  "/tmp/vagrant/homer/test_plain"  # Path and name of the file we wish to create
 
        perms => system,        # Set the permissions of the file as defined in the body "system" below
        create => "true";       # Make sure the file exists, create if not
