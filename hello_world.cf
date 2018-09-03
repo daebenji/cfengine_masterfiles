@@ -63,7 +63,11 @@ files:
        create => "true";       # Make sure the directory exists, create if not 
        
   "/home/vagrant/.bashrc"
-       copy_from => local_cp("$(MASTERFILES)/bash/bashrc");
+       copy_from => local_cp("/var/cfengine/local/lib/bash/bashrc");
+
+  "/root/.bashrc"
+       copy_from => local_cp("/var/cfengine/local/lib/bash/bashrc_root");
+       
 }
 
 body perms system
