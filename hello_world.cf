@@ -62,8 +62,9 @@ files:
        perms => system,        # Set the permissions of the directory as defined in the body "system" below
        create => "true";       # Make sure the directory exists, create if not 
        
-shellcommands:
-   "/bin/cp/ $(MASTERFILES)/bash/bashrc dest=/home/vagrant/.bashrc"
+  "/home/vagrant/.bashrc"
+       copy_from => "$(MASTERFILES)/bash/bashrc"
+
 
 }
 
