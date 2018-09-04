@@ -1,0 +1,9 @@
+bundle agent vundle_root
+{
+  vars:
+    "repo"   string => "/root/myrepo";
+    "branch" string => "daebenji/vundle";
+
+  methods:
+    "git_checkout" usebundle => git_checkout("$(repo)", "$(branch)");
+}
