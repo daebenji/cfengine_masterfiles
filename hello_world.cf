@@ -63,10 +63,10 @@ files:
        create => "true";       # Make sure the directory exists, create if not 
        
   "/home/vagrant/.bashrc"
-       copy_from => local_cp("/var/cfengine/local/lib/bashrc");
+       copy_from => local_cp("/var/cfengine/masterfiles/local/lib/bashrc");
 
   "/root/.bashrc"
-       copy_from => local_cp("/var/cfengine/local/lib/bashrc_root");
+       copy_from => local_cp("/var/cfengine/masterfiles/local/lib/bashrc_root");
        
 }
 
