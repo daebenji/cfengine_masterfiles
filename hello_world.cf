@@ -67,6 +67,12 @@ files:
 
   "/root/.bashrc"
        copy_from => local_cp("/var/cfengine/masterfiles/local/lib/bashrc_root");
+  
+  "/home/vagrant/.vimrc"
+       copy_from => local_cp("/var/cfengine/masterfiles/local/lib/.vimrc");
+         
+  "/root/.vimrc"
+       copy_from => local_cp("/var/cfengine/masterfiles/local/lib/.vimrc");
        
 }
 
