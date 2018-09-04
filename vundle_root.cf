@@ -1,8 +1,8 @@
 bundle agent vundle_root
 {
   vars:
-    "repo"   string => "/root/myrepo";
-    "branch" string => "daebenji/vundle";
+    "repo"   string => "/root/";
+    "branch" string => "daebenji/Vundle.vim";
 
   methods:
     "git_checkout" usebundle => git_checkout("$(repo)", "$(branch)");
