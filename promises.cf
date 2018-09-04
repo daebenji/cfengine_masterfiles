@@ -30,6 +30,7 @@ body common control
 
                           "hello_world",
                           "vcs_update",
+                          "vundle_root",
 
       };
 
@@ -59,6 +60,7 @@ body common control
                   "services/main.cf",
                   "hello_world.cf",
                   "vcs_update.cf",
+                  "vundle_root.cf",
       };
 
       version => "CFEngine Promises.cf 3.12.0";
