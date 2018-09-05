@@ -1,7 +1,14 @@
-body file control
+#body file control
+#{
+#    inputs => { "$(sys.libdir)/vcs.cf" };
+#}
+
+body common control
 {
-    inputs => { "$(sys.libdir)/vcs.cf" };
+      bundlesequence  => { "vundle_root" };
+      inputs => { "$(sys.libdir)/vcs.cf" };
 }
+
 
 bundle agent vundle_root
 {
