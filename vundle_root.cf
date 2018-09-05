@@ -3,11 +3,11 @@ bundle agent vundle_root
 commands:
   policy_server::
     "/usr/bin/git"
-      args => "clone https://github.com/VundleVim/vundle.vim",
+      args => "clone https://github.com/VundleVim/vundle.vim Vundle.vim",
       contain => foobar;
 }
 
 body contain foobar
 {
-  chdir => "/root/.vim/";
+  chdir => "/root/.vim/bundle/";
 }
