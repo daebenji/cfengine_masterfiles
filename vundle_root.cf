@@ -4,8 +4,6 @@ body file control{
 
 bundle agent vundle_root
 {
-  vcs:
-  
     vars:
       "repo"   string => "/root/";
       "branch" string => "daebenji/Vundle.vim";
