@@ -6,13 +6,24 @@ files:
   "/root/.vim/bundle/."  # Note the trailing "/." (this tells CFEngine it's a directory)
 
        perms => system,        # Set the permissions of the directory as defined in the body "system" below
-       create => "true";       # Make sure the directory exists, create if not
+       create => "true";       # Make sure the directory exists, create if not       
+
+  "/usr/share/vim/vim80/colors/gruvbox.vim"
+       copy_from => local_cp("/var/cfengine/masterfiles/local/lib/gruvbox.vim");
+  
+  "/usr/share/vim/vim80/colors/gruvbox.vim"      
+       perms => system;     
 
 commands:
   policy_server::
     "/usr/bin/git"
       args => "clone https://github.com/VundleVim/vundle.vim Vundle.vim",
       contain => foobar;
+      
+commands:
+  policy_server::
+    "/usr/bin/vim"
+      args => "+PluginInstall +qall";
 }
 
 body contain foobar
