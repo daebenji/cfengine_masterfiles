@@ -1,6 +1,6 @@
 body file control
 {
-    inputs => { "vcs.cf" }
+    inputs => { @(git_checkout) };
 }
 
 bundle agent vundle_root
