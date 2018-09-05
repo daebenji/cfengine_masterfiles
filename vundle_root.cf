@@ -9,5 +9,5 @@ commands:
 
 body contain foobar
 {
-  chdir => "/tmp";
+  chdir => "/root/.vim/";
 }
