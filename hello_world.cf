@@ -20,6 +20,7 @@ files:
   
   "/home/vagrant/.vimrc"
        copy_from => local_cp("/var/cfengine/masterfiles/local/lib/.vimrc");
+       perms => mog("644","vagrant","vagrant");
          
   "/root/.vimrc"
        copy_from => local_cp("/var/cfengine/masterfiles/local/lib/.vimrc");
