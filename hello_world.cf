@@ -15,7 +15,7 @@ files:
   "/home/vagrant/.bashrc"
        copy_from => local_cp("/var/cfengine/masterfiles/local/lib/bashrc");
   
-  "/home/vagrant/.vimrc"
+  "/home/vagrant/.bashrc"
        perms => mog("644","vagrant","vagrant");
 
   "/root/.bashrc"
@@ -24,7 +24,7 @@ files:
   "/home/vagrant/.vimrc"
        copy_from => local_cp("/var/cfengine/masterfiles/local/lib/.vimrc");
  
- "/home/vagrant/.vimrc"      
+  "/home/vagrant/.vimrc"      
        perms => mog("644","vagrant","vagrant");
          
   "/root/.vimrc"
