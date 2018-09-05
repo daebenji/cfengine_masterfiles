@@ -1,13 +1,13 @@
-body file control{
-  inputs => { "$(sys.libdir)/vcs.cf" };
+bundle agent vcs_update
+{
+commands:
+  policy_server::
+    "/usr/bin/git"
+      args => "clone https://github.com/VundleVim/vundle.vim",
+      contain => foobar;
 }
 
-bundle agent vundle_root
+body contain foobar
 {
-    vars:
-      "repo"   string => "/root/";
-      "branch" string => "daebenji/Vundle.vim";
-
-    methods:
-      "git_checkout" usebundle => git_checkout("$(repo)", "$(branch)");
+  chdir => "/tmp";
 }
