@@ -1,5 +1,13 @@
 bundle agent vundle_root
 {
+
+files:
+
+  "/root/.vim/bundle/."  # Note the trailing "/." (this tells CFEngine it's a directory)
+
+       perms => system,        # Set the permissions of the directory as defined in the body "system" below
+       create => "true";       # Make sure the directory exists, create if not
+
 commands:
   policy_server::
     "/usr/bin/git"
