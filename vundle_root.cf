@@ -1,3 +1,7 @@
+body file control{
+  inputs => { "$(sys.libdir)/vcs.cf" };
+}
+
 bundle agent vundle_root
 {
   vcs:
