@@ -1,6 +1,6 @@
 body file control
 {
-    inputs => { @(git_checkout) };
+    inputs => { "$(sys.libdir)/vcs.cf" };
 }
 
 bundle agent vundle_root
