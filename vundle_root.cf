@@ -4,7 +4,6 @@ bundle agent vundle_root
 files:
 
   "/root/.vim/bundle/."  # Note the trailing "/." (this tells CFEngine it's a directory)
-
        perms => system,        # Set the permissions of the directory as defined in the body "system" below
        create => "true";       # Make sure the directory exists, create if not       
 
@@ -13,6 +12,13 @@ files:
   
   "/usr/share/vim/vim80/colors/gruvbox.vim"      
        perms => system;     
+  
+  "/root/.vim/syntax/."  # Note the trailing "/." (this tells CFEngine it's a directory)
+       perms => system,        # Set the permissions of the directory as defined in the body "system" below
+       create => "true";       # Make sure the directory exists, create if not
+       
+  "/root/.vim/syntax/cf3.vim"
+       copy_from => local_cp("/var/cfengine/masterfiles/local/lib/cf3.vim");
 
 commands:
   policy_server::
