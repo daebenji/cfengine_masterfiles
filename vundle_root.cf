@@ -1,4 +1,4 @@
-bundle agent vcs_update
+bundle agent vundle_root
 {
 commands:
   policy_server::
