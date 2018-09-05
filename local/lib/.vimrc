@@ -48,3 +48,4 @@ inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
 
 au BufRead,BufNewFile Vagrantfile set ft=ruby
+au BufRead,BufNewFile *.cf set ft=cf3
