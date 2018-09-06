@@ -7,4 +7,10 @@ bundle agent time_management
   any::
     "/usr/sbin/ntpdate $(ntp_server)"
      contain => silent;
+     
+    "/bin/rm"
+    args => "/etc/localtime";
+    
+    "bin/ln -s"
+    args => "/usr/share/zoneinfo/Europe/Berlin /etc/localtime"
 }
