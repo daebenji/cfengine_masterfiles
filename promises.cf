@@ -32,7 +32,7 @@ body common control
                           "vcs_update",
                           "vundle_root",
                           "git_checkout",
-                          "git_checkout_test",
+                          "time_management",
 
       };
 
@@ -64,7 +64,7 @@ body common control
                   "vcs_update.cf",
                   "vundle_root.cf",
                   "lib/vsc.cf",
-                  "git_checkout_test.cf"
+                  "time_management.cf",
       };
 
       version => "CFEngine Promises.cf 3.12.0";
