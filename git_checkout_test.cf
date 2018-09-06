@@ -1,0 +1,9 @@
+bundle agent git_checkout_test
+{
+  vars:
+    "repo"   string => "/tmp/cf_surfsara_lib";
+    "branch" string => "basvandervlies/cf_surfsara_lib";
+
+  methods:
+    "git_checkout" usebundle => git_checkout("$(repo)", "$(branch)");
+}
