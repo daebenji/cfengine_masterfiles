@@ -1,0 +1,10 @@
+bundle agent time_management
+{
+  vars:
+  any::
+     "ntp_server" string => "no.pool.ntp.org";
+  commands:
+  any::
+    "/usr/sbin/ntpdate $(ntp_server)"
+     contain => silent;
+}
