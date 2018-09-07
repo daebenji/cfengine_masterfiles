@@ -21,6 +21,6 @@ bundle agent time_management
     "/bin/rm"
     args => "/etc/localtime";
 
-    "bin/ln -s"
+    "/bin/ln -s"
     args => "/usr/share/zoneinfo/Europe/Berlin /etc/localtime";
 }
