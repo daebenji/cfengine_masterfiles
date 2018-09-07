@@ -25,8 +25,4 @@ bundle agent home_skel(users, skel)
       create => "true",
       copy_from => seed_cp( $(skel) ),
       depth_search => recurse( "inf" );
-  
-  editfiles:
-    "/tmp/vagrant/foo/test_plain"
-      AppendIfNoSuchLine "Zeile 1"
 }
