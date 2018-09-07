@@ -4,6 +4,14 @@ bundle agent time_management
   any::
      "ntp_server" string => "no.pool.ntp.org";
   commands:
+  
+  debian::
+     "ntp"
+       policy  => present,
+       version => latest,
+       package_version => apt_get,
+       comment => "Install latest ntp package from repoistory";
+
   any::
     "/usr/sbin/ntpdate $(ntp_server)"
      contain => silent;
