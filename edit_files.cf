@@ -1,0 +1,30 @@
+#!/var/cfengine/bin/cf-agent -K
+
+bundle agent file_test
+{
+files:
+  "/home/vagrant/.vim/."
+        create => "true",
+        perms => mog("755","vagrant","vagrant"),
+        depth_search => recurse("inf");
+
+
+  "/home/vagrant/tmp/"
+        perms => system,
+        create => "true";
+
+  "/home/vagrant/tmp/test_plain.txt"
+        perms => system,
+        create => "true",
+        edit_line => hello_world;
+}
+
+bundle edit_line hello_world {
+        insert_lines:
+                "Hello World!";
+}
+
+body perms system
+{
+  mode => "0640";
+}
