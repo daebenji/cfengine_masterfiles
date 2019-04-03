@@ -33,6 +33,7 @@ body common control
                           "vundle_root",
                           "git_checkout",
                           "time_management",
+                          "edit_file",
 
       };
 
@@ -65,6 +66,7 @@ body common control
                   "vundle_root.cf",
                   "lib/vsc.cf",
                   "time_management.cf",
+                  "edit_file.cf",
       };
 
       version => "CFEngine Promises.cf 3.12.0";
